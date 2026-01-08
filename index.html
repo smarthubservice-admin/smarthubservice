@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Smart Hub Service - AI Agency & Futuristic Startup</title>
+    <meta name="description" content="AI Agency and Futuristic Startup providing smart service solutions.">
+    <link rel="icon" href="img/smarthubservice_logo.png" sizes="32x32" type="image/png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap.min.css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom.css -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="css/aos.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/smarthubservice_logo.png" alt="Smart Hub Service Logo" class="logo-img">
+                <span class="brand-text">Smart Hub Service</span>
+            </a>
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <!-- <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn atlas-cta ml-3">Get Started</a>
+            </div> -->
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="circles">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <p class="hero-tag" data-aos="fade-down" data-aos-duration="800">Smart Hub Service Solution
+                        Generator
+                    </p>
+                    <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        Crafting Solutions<br>
+                        <span class="gradient-text">Redefining Success</span>
+                    </h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        In an era marked by dynamic challenges and evolving landscapes, we provide a strategic blend of
+                        cutting-edge technology and agile methodologies.
+                    </p>
+
+                    <!-- AI Prompt Generator -->
+                    <!-- <div class="ai-prompt-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <input type="text" class="prompt-input"
+                            placeholder="What solution can we help you craft today?">
+                        <button class="btn atlas-cta cta-generate">Generate</button>
+                    </div> -->
+
+                    <!-- Quick Try Buttons -->
+                    <!-- <div class="quick-try" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <span class="quick-label">Quick Try:</span>
+                        <button class="quick-btn">eLibrary</button>
+                        <button class="quick-btn">IoT</button>
+                        <button class="quick-btn">Mobile App</button>
+                        <button class="quick-btn">Cloud</button>
+                    </div> -->
+
+                    <!-- AI Result Display (Hidden by default) -->
+                    <div id="ai-result" class="ai-result-container mt-5" style="display: none;">
+                        <div class="result-card" data-aos="zoom-in">
+                            <div class="result-loader" id="loader">
+                                <div class="spinner"></div>
+                                <p>Smart Hub Service AI is dreaming...</p>
+                            </div>
+                            <div class="result-image-box" id="result-image-box" style="display: none;">
+                                <img id="generated-image" src="" alt="Generated AI Art">
+                                <div class="result-actions">
+                                    <button class="btn atlas-secondary">Download</button>
+                                    <button class="btn atlas-cta">Share</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="img/elibrary_building.png" alt="eLibrary Business" class="about-image">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <p class="section-tag">What Smart Hub Service Do</p>
+                    <h2 class="section-title">Introducing our<br>eLibrary Solution.</h2>
+                    <p class="section-description">
+                        Revolutionize library operations with our sophisticated platform. We seamlessly blend
+                        technology with the timeless essence of literature to meet modern digital needs.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fa fa-check-circle"></i> Accounts(Hubs)</li>
+                        <li><i class="fa fa-check-circle"></i> Members</li>
+                        <li><i class="fa fa-check-circle"></i> Plan managements</li>
+                        <li><i class="fa fa-check-circle"></i> Seat Managements</li>
+                    </ul>
+                    <a href="#services" class="btn atlas-cta mt-4">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="text-center section-title mb-5" data-aos="fade-up">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="service-card">
+                        <div class="icon-box"><i class="fa fa-microchip"></i></div>
+                        <h4>IoT Development</h4>
+                        <p>Creating software solutions that integrate with IoT devices for data collection, monitoring,
+                            and automation.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="service-card featured">
+                        <div class="icon-box"><i class="fa fa-code"></i></div>
+                        <h4>App Development</h4>
+                        <p>Creating dynamic web solutions and mobile apps. Implementing responsive design for optimal
+                            user experiences.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="icon-box"><i class="fa fa-cloud"></i></div>
+                        <h4>Cloud Computing</h4>
+                        <p>Infrastructure, Platform, and Software as a Service (IaaS, PaaS, SaaS) based on robust cloud
+                            architectures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <!-- Feature 1: Productivity -->
+            <div class="row align-items-center feature-row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="feature-img-box">
+                        <img src="img/productivity_feat.png" alt="Developer Productivity" class="feature-image">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <p class="section-tag">Take a look inside</p>
+                    <h2 class="section-title">Developer Productivity</h2>
+                    <p class="section-description">
+                        The right development platform empowers developers to achieve maximum productivity. Features
+                        such as robust integrated development environments (IDEs), debugging tools, and efficient
+                        workflows contribute to a developer-friendly environment. A platform that supports rapid
+                        development and iteration can significantly impact time-to-market and project success.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 2: Security -->
+            <div class="row align-items-center feature-row flex-lg-row-reverse">
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="feature-img-box">
+                        <img src="img/security_feat.png" alt="Safe and Reliable" class="feature-image">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right">
+                    <p class="section-tag">Safe and reliable</p>
+                    <h2 class="section-title">Safe and reliable</h2>
+                    <p class="section-description">
+                        In the era of increasing cyber threats and stringent data protection regulations, security is
+                        non-negotiable. A robust development platform should prioritize security features, offer secure
+                        coding practices, and facilitate compliance with industry regulations. Proactive security
+                        measures during development can save significant resources in the long run.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3: Integration -->
+            <div class="row align-items-center feature-row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="feature-img-box">
+                        <img src="img/ai_building.png" alt="Integration Capabilities" class="feature-image">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <p class="section-tag">Take a look inside</p>
+                    <h2 class="section-title">Integration Capabilities</h2>
+                    <p class="section-description">
+                        In the interconnected world of software applications, seamless integration with other systems is
+                        paramount. A development platform should support easy integration with third-party services,
+                        APIs, and other tools. Compatibility with existing systems enhances the platform's versatility
+                        and contributes to a more cohesive software ecosystem.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 4: Cost-Efficiency -->
+            <div class="row align-items-center feature-row flex-lg-row-reverse">
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="feature-img-box">
+                        <img src="img/cost_effective.jpg" alt="Cost Efficiency" class="img-fluid feature-image">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right">
+                    <p class="section-tag">Value Driven</p>
+                    <h2 class="section-title">Cost-Efficiency</h2>
+                    <p class="section-description">
+                        The financial aspect is a critical consideration in any development project. While some
+                        platforms may have initial costs, evaluating the overall cost of ownership is crucial. A
+                        platform that aligns with the project's budget, offers transparent licensing models, and
+                        minimizes hidden costs contributes to a financially sound development process.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <!-- <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="text-center section-title mb-5" data-aos="fade-up">Simple Pricing for Everyone</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Starter</h3>
+                            <div class="price"><span>$</span>19<span>/mo</span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fa fa-check"></i> 1,000 AI Generations</li>
+                            <li><i class="fa fa-check"></i> Standard Support</li>
+                            <li><i class="fa fa-check"></i> 5 Projects</li>
+                            <li class="disabled"><i class="fa fa-times"></i> Commercial API Access</li>
+                        </ul>
+                        <button class="btn atlas-cta w-100">Get Started</button>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Professional</h3>
+                            <div class="price"><span>$</span>49<span>/mo</span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fa fa-check"></i> 10,000 AI Generations</li>
+                            <li><i class="fa fa-check"></i> Priority Support</li>
+                            <li><i class="fa fa-check"></i> Unlimited Projects</li>
+                            <li><i class="fa fa-check"></i> Commercial API Access</li>
+                        </ul>
+                        <button class="btn atlas-cta w-100">Go Professional</button>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Enterprise</h3>
+                            <div class="price"><span>$</span>99<span>/mo</span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fa fa-check"></i> Unlimited Generations</li>
+                            <li><i class="fa fa-check"></i> 24/7 Dedicated Support</li>
+                            <li><i class="fa fa-check"></i> Custom Models</li>
+                            <li><i class="fa fa-check"></i> Advanced Analytics</li>
+                        </ul>
+                        <button class="btn atlas-cta w-100">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="section-title" data-aos="fade-right">Meet our team of<br>Creative Expert.</h2>
+                    <p class="section-description" data-aos="fade-right" data-aos-delay="100">
+                        AI systems can analyze data, recognize patterns, make decisions, and even adapt and improve over
+                        time.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-right" data-aos="fade-left">
+                    <button class="team-nav-btn"><i class="fa fa-arrow-left"></i></button>
+                    <button class="team-nav-btn"><i class="fa fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="team-card">
+                        <img src="img/akhilesh.jpg" alt="Akhilesh">
+                        <div class="team-info">
+                            <h4>Akhilesh</h4>
+                            <p class="team-role">CEO, Smart Hub Service</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card">
+                        <img src="img/Pooja.png" alt="Pooja">
+                        <div class="team-info">
+                            <h4>Pooja</h4>
+                            <p class="team-role">Marketing and Social Media Head</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-card">
+                        <img src="img/Akhi.png" alt="Akhi">
+                        <div class="team-info">
+                            <h4>Akhi</h4>
+                            <p class="team-role">AI/ML Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="text-center section-title mb-5" data-aos="fade-up">What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fa fa-quote-left"></i>
+                            <p>Smart Hub Service has completely transformed how we approach AI art. The results are
+                                consistently
+                                stunning and professional.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="img/avatar/avatar-9.webp" alt="Sunil">
+                            <div class="author-info">
+                                <h5>Sunil</h5>
+                                <p>Autopart Enterprise Pvt Ltd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fa fa-quote-left"></i>
+                            <p>The speed and quality of generation are unmatched. It's become an essential tool in our
+                                creative workflow.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="img/avatar/avatar-25.webp" alt="Sudarshan">
+                            <div class="author-info">
+                                <h5>Sudarshan</h5>
+                                <p>eLibrary Director</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fa fa-quote-left"></i>
+                            <p>Outstanding customer support and a very intuitive interface. Highly recommended for any
+                                serious studio.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="img/avatar/avatar-24.webp" alt="Jintender">
+                            <div class="author-info">
+                                <h5>Jintender</h5>
+                                <p>Sales Expert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="circles">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-description">
+                        Where Inquiries Meet Solutions, Every Time.
+                    </p>
+                    <ul class="contact-info">
+                        <li><i class="fa fa-envelope"></i> smarthubserviceinfo@gmail.com</li>
+                        <li><i class="fa fa-phone"></i> +91 6377678913</li>
+                        <li><i class="fa fa-map-marker"></i> Ghazipur, Utter Pradesh, India</li>
+                    </ul>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" id="contactName" class="form-control" placeholder="Your Name"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" id="contactEmail" class="form-control" placeholder="Your Email"
+                                    required>
+                            </div>
+                        </div>
+                        <textarea id="contactMessage" class="form-control" rows="5" placeholder="Your Message"
+                            required></textarea>
+                        <button type="submit" class="btn atlas-cta atlas-cta-wide" id="sendBtn">Send Message</button>
+                        <div id="contactStatus" class="mt-3 text-center" style="display: none; font-weight: 600;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6 text-white text-center text-md-left">
+                    Copyright © 2024 <a href="#">Smart Hub Service</a> All rights reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-right" id="social-media">
+                    <a href="#" class="social-link"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS -->
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Scroll to top functionality
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Mock AI Generation Logic
+        const generateBtn = document.querySelector('.cta-generate');
+        const promptInput = document.querySelector('.prompt-input');
+        const aiResult = document.getElementById('ai-result');
+        const loader = document.getElementById('loader');
+        const resultImageBox = document.getElementById('result-image-box');
+        const generatedImage = document.getElementById('generated-image');
+
+        const mockImages = [
+            'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1633167606207-d840b5070fc2?auto=format&fit=crop&q=80&w=1000'
+        ];
+
+        generateBtn.addEventListener('click', () => {
+            const prompt = promptInput.value.trim();
+            if (!prompt) {
+                promptInput.style.borderColor = '#EF4444';
+                setTimeout(() => promptInput.style.borderColor = '', 2000);
+                return;
+            }
+
+            aiResult.style.display = 'block';
+            aiResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            loader.style.display = 'block';
+            resultImageBox.style.display = 'none';
+            generateBtn.disabled = true;
+            generateBtn.innerText = 'Generating...';
+
+            // Mock delay for "AI Generation"
+            setTimeout(() => {
+                // Show loader with new message
+                loader.style.display = 'block';
+                const loaderText = loader.querySelector('p');
+                loaderText.textContent = 'Smart Hub Service is designing your solution...';
+                document.getElementById('result-image-box').style.display = 'none';
+                const randomImg = mockImages[Math.floor(Math.random() * mockImages.length)];
+                generatedImage.src = randomImg;
+                generateBtn.disabled = false;
+                generateBtn.innerText = 'Generate';
+            }, 3000);
+        });
+
+        // Quick Try prompts
+        document.querySelectorAll('.quick-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                promptInput.value = btn.innerText + ' style AI artwork';
+                generateBtn.click();
+            });
+        });
+
+        // Contact Form Functionality
+        const contactForm = document.getElementById('contactForm');
+        const contactStatus = document.getElementById('contactStatus');
+        const sendBtn = document.getElementById('sendBtn');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const message = document.getElementById('contactMessage').value;
+            const recipient = 'smarthubserviceinfo@gmail.com';
+
+            // Construct mailto link
+            const subject = encodeURIComponent(`Message from ${name} via Smart Hub Service`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+
+            // Show confirmation message
+            contactStatus.style.display = 'block';
+            contactStatus.style.color = '#10B981'; // Green color
+            contactStatus.textContent = 'Opening your email client... Message sent successfully!';
+
+            // Optional: reset form after a delay
+            setTimeout(() => {
+                contactForm.reset();
+                // Keep the success message visible for a bit longer
+                setTimeout(() => {
+                    contactStatus.style.display = 'none';
+                }, 5000);
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>

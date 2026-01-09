@@ -6,7 +6,7 @@ export default function Testimonials() {
       <div className="container">
         <h2 className="text-center section-title mb-5" data-aos="fade-up">What Our Clients Say</h2>
         <div className="row">
-          <div className="col-md-4" data-aos="fade-up" data-aos-delay="0">
+          <div className="col-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="0">
             <div className="testimonial-card">
               <div className="testimonial-content">
                 <i className="fa fa-quote-left"></i>
@@ -21,7 +21,7 @@ export default function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div className="col-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div className="testimonial-card">
               <div className="testimonial-content">
                 <i className="fa fa-quote-left"></i>
@@ -36,7 +36,7 @@ export default function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="col-md-4" data-aos="fade-up" data-aos-delay="400">
+          <div className="col-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="400">
             <div className="testimonial-card">
               <div className="testimonial-content">
                 <i className="fa fa-quote-left"></i>

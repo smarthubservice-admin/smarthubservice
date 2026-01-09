@@ -47,7 +47,7 @@ export default function Contact() {
       </div>
       <div className="container">
         <div className="row justify-content-between">
-          <div className="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+          <div className="col-12 col-md-5 mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="1000">
             <h2 className="section-title">Contact Us</h2>
             <p className="section-description">Where Inquiries Meet Solutions, Every Time.</p>
             <ul className="contact-info">
@@ -56,13 +56,13 @@ export default function Contact() {
               <li><i className="fa fa-map-marker"></i> Ghazipur, Utter Pradesh, India</li>
             </ul>
           </div>
-          <div className="col-md-6" data-aos="fade-left">
+          <div className="col-12 col-md-6" data-aos="fade-left">
             <form className="contact-form" id="contactForm" onSubmit={handleSubmit}>
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-12 col-sm-6">
                   <input name="contactName" type="text" className="form-control" placeholder="Your Name" required />
                 </div>
-                <div className="col-md-6">
+                <div className="col-12 col-sm-6">
                   <input name="contactEmail" type="email" className="form-control" placeholder="Your Email" required />
                 </div>
               </div>

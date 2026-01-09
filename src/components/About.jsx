@@ -5,10 +5,10 @@ export default function About() {
     <section id="about" className="about-section">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <div className="col-12 col-md-6" data-aos="fade-right" data-aos-duration="1000">
             <img src="/img/elibrary_building.png" alt="eLibrary Business" className="about-image" />
           </div>
-          <div className="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+          <div className="col-12 col-md-6" data-aos="fade-left" data-aos-duration="1000">
             <p className="section-tag">What Smart Hub Service Do</p>
             <h2 className="section-title">Introducing our<br />eLibrary Solution.</h2>
             <p className="section-description">

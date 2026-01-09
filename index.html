@@ -490,125 +490,87 @@
         <i class="fa fa-arrow-up"></i>
     </button>
 
-    <!-- AOS -->
+    <!-- Local EmailJS + AOS -->
+    <script src="js/emailjs.browser.min.js"></script>
     <script src="js/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        if (typeof emailjs !== 'undefined') {
+            try { emailjs.init('zQckhKyZAVpbKB37d'); console.log('EmailJS initialized'); } catch (e) { console.warn('EmailJS init failed', e); }
+        } else {
+            console.warn('emailjs not found');
+        }
 
-        // Scroll to top functionality
-        const scrollTopBtn = document.getElementById('scrollTop');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollTopBtn.classList.add('show');
-            } else {
-                scrollTopBtn.classList.remove('show');
-            }
-        });
-
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        // Ensure EmailJS is ready before attempting to send — avoids first-click race
+        const emailjsReady = (async () => {
+            if (typeof emailjs !== 'undefined') return true;
+            return new Promise((resolve) => {
+                let attempts = 0;
+                const iv = setInterval(() => {
+                    if (typeof emailjs !== 'undefined') { clearInterval(iv); try { emailjs.init('zQckhKyZAVpbKB37d'); } catch (e) {} resolve(true); }
+                    attempts++;
+                    if (attempts > 50) { clearInterval(iv); resolve(false); }
+                }, 100);
             });
-        });
+        })();
 
-        // Mock AI Generation Logic
+        AOS.init({ duration: 1000, once: true });
+
+        // Scroll to top
+        const scrollTopBtn = document.getElementById('scrollTop');
+        if (scrollTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) scrollTopBtn.classList.add('show'); else scrollTopBtn.classList.remove('show');
+            });
+            scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+
+        // Smooth nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => anchor.addEventListener('click', function (e) { e.preventDefault(); const t = document.querySelector(this.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }));
+
+        // AI mock
         const generateBtn = document.querySelector('.cta-generate');
         const promptInput = document.querySelector('.prompt-input');
         const aiResult = document.getElementById('ai-result');
         const loader = document.getElementById('loader');
         const resultImageBox = document.getElementById('result-image-box');
         const generatedImage = document.getElementById('generated-image');
-
-        const mockImages = [
-            'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1000',
-            'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=1000',
-            'https://images.unsplash.com/photo-1633167606207-d840b5070fc2?auto=format&fit=crop&q=80&w=1000'
-        ];
-
-        generateBtn.addEventListener('click', () => {
-            const prompt = promptInput.value.trim();
-            if (!prompt) {
-                promptInput.style.borderColor = '#EF4444';
-                setTimeout(() => promptInput.style.borderColor = '', 2000);
-                return;
-            }
-
-            aiResult.style.display = 'block';
-            aiResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            loader.style.display = 'block';
-            resultImageBox.style.display = 'none';
-            generateBtn.disabled = true;
-            generateBtn.innerText = 'Generating...';
-
-            // Mock delay for "AI Generation"
-            setTimeout(() => {
-                // Show loader with new message
-                loader.style.display = 'block';
-                const loaderText = loader.querySelector('p');
-                loaderText.textContent = 'Smart Hub Service is designing your solution...';
-                document.getElementById('result-image-box').style.display = 'none';
-                const randomImg = mockImages[Math.floor(Math.random() * mockImages.length)];
-                generatedImage.src = randomImg;
-                generateBtn.disabled = false;
-                generateBtn.innerText = 'Generate';
-            }, 3000);
-        });
-
-        // Quick Try prompts
-        document.querySelectorAll('.quick-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                promptInput.value = btn.innerText + ' style AI artwork';
-                generateBtn.click();
+        if (generateBtn && promptInput) {
+            const mockImages = ['https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1000','https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=1000','https://images.unsplash.com/photo-1633167606207-d840b5070fc2?auto=format&fit=crop&q=80&w=1000'];
+            generateBtn.addEventListener('click', () => {
+                const prompt = promptInput.value.trim(); if (!prompt) { promptInput.style.borderColor = '#EF4444'; setTimeout(() => promptInput.style.borderColor = '', 2000); return; }
+                aiResult.style.display = 'block'; aiResult.scrollIntoView({ behavior: 'smooth', block: 'center' }); loader.style.display = 'block'; resultImageBox.style.display = 'none'; generateBtn.disabled = true; generateBtn.innerText = 'Generating...';
+                setTimeout(() => { if (loader) { const loaderText = loader.querySelector('p'); if (loaderText) loaderText.textContent = 'Smart Hub Service is designing your solution...'; } if (resultImageBox) resultImageBox.style.display = 'none'; if (generatedImage) generatedImage.src = mockImages[Math.floor(Math.random()*mockImages.length)]; generateBtn.disabled = false; generateBtn.innerText = 'Generate'; }, 3000);
             });
-        });
+            document.querySelectorAll('.quick-btn').forEach(btn => btn.addEventListener('click', () => { promptInput.value = btn.innerText + ' style AI artwork'; generateBtn.click(); }));
+        }
 
-        // Contact Form Functionality
+        // Contact Form — use EmailJS
         const contactForm = document.getElementById('contactForm');
         const contactStatus = document.getElementById('contactStatus');
         const sendBtn = document.getElementById('sendBtn');
+        function showStatus(msg, type) { if (contactStatus) { contactStatus.style.display = 'block'; contactStatus.style.color = type === 'success' ? '#10B981' : '#EF4444'; contactStatus.textContent = msg; } }
 
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const name = document.getElementById('contactName').value;
-            const email = document.getElementById('contactEmail').value;
-            const message = document.getElementById('contactMessage').value;
-            const recipient = 'smarthubserviceinfo@gmail.com';
-
-            // Construct mailto link
-            const subject = encodeURIComponent(`Message from ${name} via Smart Hub Service`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-            const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
-
-            // Open email client
-            window.location.href = mailtoLink;
-
-            // Show confirmation message
-            contactStatus.style.display = 'block';
-            contactStatus.style.color = '#10B981'; // Green color
-            contactStatus.textContent = 'Opening your email client... Message sent successfully!';
-
-            // Optional: reset form after a delay
-            setTimeout(() => {
-                contactForm.reset();
-                // Keep the success message visible for a bit longer
-                setTimeout(() => {
-                    contactStatus.style.display = 'none';
-                }, 5000);
-            }, 1000);
-        });
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const name = document.getElementById('contactName').value.trim();
+                const email = document.getElementById('contactEmail').value.trim();
+                const message = document.getElementById('contactMessage').value.trim();
+                if (!name || !email || !message) { showStatus('Please fill in all fields.', 'error'); return; }
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; if (!emailRegex.test(email)) { showStatus('Please enter a valid email address.', 'error'); return; }
+                sendBtn.disabled = true; const originalText = sendBtn.textContent; sendBtn.textContent = 'Sending...';
+                try {
+                    // wait for EmailJS to be ready (prevents first-click race)
+                    const ready = await emailjsReady;
+                    console.log('EmailJS ready:', ready);
+                    if (!ready || typeof emailjs === 'undefined') throw new Error('EmailJS not available');
+                    const res = await emailjs.send('service_y5t2nyb','template_8iasyyh',{ from_name: name, from_email: email, message: message, to_email: 'smarthubserviceinfo@gmail.com' });
+                    console.log('EmailJS send result', res);
+                    if (res && res.status === 200) { showStatus('✓ Mail sent successfully! We will reach out to you soon.', 'success'); setTimeout(() => { contactForm.reset(); setTimeout(() => { if (contactStatus) contactStatus.style.display = 'none'; }, 5000); }, 1000); } else { showStatus('✗ Failed to send message. Please try again.', 'error'); }
+                } catch (err) { console.error('EmailJS Error:', err); showStatus('✗ Error: ' + (err && (err.text || err.message) ? (err.text || err.message) : 'Failed to send message.'), 'error'); }
+                finally { sendBtn.disabled = false; sendBtn.textContent = originalText; }
+            });
+        }
     </script>
 </body>
 
